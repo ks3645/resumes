@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% Modifications by:
+% Karl Schober
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[no-math]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%
+	%     LAST UPDATED DATE
+	%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\lastupdated
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%
+	%     TITLE NAME
+	%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\namesection{Karl}{Schober}{ \urlstyle{same}
+	% replace with info when building only, lazy attempt to reduce automated spam, the PDF in the repo will have the info anyways
+		\href{mailto:EMAIL HERE}{EMAIL HERE} | PHONE NUMBER HERE
+	}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%
+	%     COLUMN ONE
+	%
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{minipage}[t]{0.33\textwidth} 
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%     EDUCATION
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\section{Education} 
+
+		\subsection{University of }
+		\subsection{South Carolina}
+		\descript{BS in Physics and Mathematics}
+		\location{May 2016 | Columbia, SC}
+	%	\location{Cum. GPA: 3.9/4.0}
+		\location{Magna Cum Laude}
+		College of Arts and Sciences \\
+		Dean's List (All Semesters) \\
+		\descript{Minor in Computer Science}
+		Conc. Artificial Intelligence \\
+		College of Computer Science and Engineering
+		\sectionsep
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%     LINKS
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\section{Links} 
+		Github:// \href{https://github.com/ks3645}{\bf ks3645} \\
+		LinkedIn://  \href{https://www.linkedin.com/in/karl-schober/}{\bf Karl-Schober} \\
+		arXiv://  \href{https://arxiv.org/search/?searchtype=author\&query=Schober\%2C+Karl}{\bf Karl Schober} \\
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%     COURSEWORK
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\section{Coursework}
+		
+		\subsection{Undergraduate}
+		\descript{Computer Science}
+		Unix Tools and Scripting \\
+		Artificial Intelligence \\
+		Object Oriented Programming \\
+		\descript{Mathematics}
+		Graph Theory \\
+		Group, Field, and Galois Theory \\
+		\descript{Physics}
+		Experimental Design 		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%     SKILLS
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\section{Skills}
+		\subsection{Programming}
+		\location{Most Proficient:}
+		 Rust \textbullet{} C\# \textbullet{} Java \textbullet{} Python \textbullet{} Postgres \textbullet{} Javascript \& TypeScript \textbullet{} \LaTeX \\ 
+		\location{Proficient:}
+		C \textbullet{} C++ \textbullet{} Unix Shell \textbullet{} T-SQL \textbullet GraphQL \\
+		\location{Familiar:}
+		CERN ROOT \textbullet{} Haxe \\
+		\location{Testing:}
+		Cyprus \textbullet Jasmine \textbullet xUnit.NET \textbullet MSTest \textbullet Playwright \\
+		\location{Frameworks:}
+		WPF \textbullet MSMQ  \textbullet AngularJS \textbullet Vue 2 \& 3 \textbullet \\ ASP.NET Core \textbullet React \textbullet Next.js \\
+		\location{Cloud:}
+		GCP \textbullet Cloudflare \textbullet AWS S3 \textbullet Docker Compose \textbullet Azure DevOps \textbullet GitHub
+		\sectionsep
+		
+		
+		
+		\subsection{Practical}
+		NIM Instruments \\
+		Oscilloscopes \\
+		PCB Rework
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%
+		%     COLUMN TWO
+		%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+	\end{minipage} 
+	\hfill
+	\begin{minipage}[t]{0.66\textwidth} 
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%     EXPERIENCE
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\section{Experience}
+		
+		\runsubsection{Upswing}
+		\descript{| Remote}
+		\location{\small{Software Developer: Mar 2020 - 2021} \\ \small{Senior Software Developer: 2021 - 2024} \\ \small{Principal Software Engineer: 2024 - Oct 2024} }
+		\vspace{\topsep} % Hacky fix for awkward extra vertical space
+		\begin{tightemize}
+			\item Scaled hybrid human/AI chatbot product, Ana, to cover total addressable market  (up from a previous max of 1000 daily active users) with reliability over >99.99\% by refactoring critical components.
+			\item Implemented fuzzy matching algorithms and designed ethical AI for intent detection
+			 which increased response automation for messages from 20\% to 45\% while retaining perfect QOS for end-users.
+			\item Led initiatives for better project level documentation and code standards to improve engineering practices. 
+			\item Lead developer for project to update proprietary backend framework from .NET Framework 4.5 to LTS .NET Core in order to achieve cross platform support, reduce server costs, increase performance, and ensure stability and security
+			\item Lead member on project to implement security best practices and meet compliance standards for TX-RAMP and SOC2 
+			\item Member of a volunteer committee for improving company culture by curating training material and planning all-hands events
+		\end{tightemize}
+		\sectionsep
+		
+		
+		\runsubsection{Redwood Logistics \small{(prev. Strive Logistics)}}
+		\descript{| Austin, TX}
+		\location{\small{Software Developer:} Apr 2018 - Jul 2019}
+		\vspace{\topsep} % Hacky fix for awkward extra vertical space
+		\begin{tightemize}
+			\item Backend developer for LoadRunner, a proprietary C\#/WPF application for managing 3rd party logistics workflow. Focused on architecture and API improvements leveraging functional programming paradigms
+			\item Designed a new search engine, providing 100x faster searches for users and a more scalable back-end implementation
+			\item Designed a new document generation framework to replace Crystal Reports for generating business documents. This allowed designers to work with a more accessible HTML template interface, and provided a more easily understandable framework for developers to add future document models.
+			\item Improved engineering practices by contributing to more detailed code standards and pushing for better testing and deployment procedures
+		\end{tightemize}
+		\sectionsep
+		
+%		\runsubsection{SCGSSM Foundation}
+%		\descript{| \small{iTEAMS Teaching Assistant}}
+%		\location{Summers 2012 –  2015 | Greenville, Spartanburg, Greenwood, SC}
+%		\vspace{\topsep} % Hacky fix for awkward extra vertical space
+%		\begin{tightemize}
+%		\item Instructed middle school students in computer programming and online safety skills
+%		\item Responsible for training local school district teachers on software used in camp classes
+%		\item Assisted in lesson planning by providing technical insights
+%		\end{tightemize}
+%		\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{University of South Carolina}
+\descript{| \small {Independent Study \& Senior Thesis}}
+\location{Aug 2015 - May 2016 | Columbia, SC}
+Worked with Dr. Brett Altschul, studying solutions to a modified version of Maxwell's Equations in order to further characterize an exotic theory. 
+\sectionsep
+
+%\runsubsection{University of South Carolina}
+%\descript{| \small {Research Assistant}}
+%\location{Mar 2013 – May 2013 | Columbia, SC}
+%Worked with Dr. Yuriy Pershin to write a program to simulate the electrical characteristics of memristors.
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Awards} 
+%\begin{tabular}{rll}
+%	2016	     & Frank and Nina Avignone Fellowship (1st in class for Physics)\\
+%	2016	     & Jeong S. Wang Award for Excellence in Undergraduate Mathematics\\
+%	2015	     & James Bruce Coleman Mathematics Scholarship\\
+%\end{tabular}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+%\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+\vspace{ 16pt}
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
